@@ -11,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #333;
+    background: #000000;
     color: white;
     padding: 15px 20px;
 }
@@ -76,7 +76,7 @@ nav a {
     background: white;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
     text-align: center;
 }
 
@@ -86,23 +86,22 @@ nav a {
 }
 
 footer {
-    background: #222;
+    background: #000000;
     color: white;
     text-align: center;
     padding: 10px;
 }
 .social-icons a {
-    color: #fff; /* تأكد من أن لون الرابط أبيض */
-    font-size: 24px;
-    transition: color 0.3s, transform 0.3s;
-  }
-  
-  /* للتأكد من أن جميع حالات الرابط (visited, hover, active) تحمل نفس اللون */
-  .social-icons a:link,
-  .social-icons a:visited,
-  .social-icons a:hover,
-  .social-icons a:active {
-    color: #fff;
-    text-decoration: none;
-  }
-  
+  color: #fff; /* تأكد من أن لون الرابط أبيض */
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* للتأكد من أن جميع حالات الرابط (visited, hover, active) تحمل نفس اللون */
+.social-icons a:link,
+.social-icons a:visited,
+.social-icons a:hover,
+.social-icons a:active {
+  color: #fff;
+  text-decoration: none;
+}
