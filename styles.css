@@ -1,5 +1,21 @@
-/* Styles for Amazon-like UI with Ibrahim Alayan Interior Design theme */
-
+header {
+    display: flex;
+    align-items: center;    
+    padding: 10px;
+    background-color: #f1f1f1; 
+  }
+  
+  header .logo {
+    max-height: 50px;     
+    margin-right: 10px;    
+  }
+  
+  header h1 {
+    font-size: 24px;       
+    color: #333;       
+    margin: 0;            
+  }
+  
 body {
     margin: 0;
     padding: 0;
