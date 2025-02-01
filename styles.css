@@ -1,3 +1,10 @@
+.logo-container h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(245, 209, 9, 0.555); /* اللون الذهبي */
+    text-shadow: 1px 1px 3px black; /* ظل أسود لإضافة عمق */
+}
+
 header {
     display: flex;
     align-items: center;    
