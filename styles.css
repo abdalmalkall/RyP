@@ -38,16 +38,16 @@ header {
 }
 
 .search-bar {
-    width: 50%;
+    width: 48%;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 40px;
     border: none;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .hero {
