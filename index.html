@@ -42,11 +42,76 @@
             </div>
         </div>
     </section>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+      /* تنسيق الفوتر */
+      footer {
+        background: #222;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+  
+      footer p {
+        margin: 0 0 10px;
+        font-size: 14px;
+      }
+  
+      /* تنسيق الأيقونات باستخدام Flexbox */
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+  
+      .social-icons a {
+        color: #fff; /* لون الرابط أبيض */
+        font-size: 24px;
+        transition: color 0.3s, transform 0.3s;
+      }
+  
+      /* تأكيد على ثبات لون الرابط في جميع الحالات */
+      .social-icons a:link,
+      .social-icons a:visited,
+      .social-icons a:hover,
+      .social-icons a:active {
+        color: #fff;
+        text-decoration: none;
+      }
+  
+      .social-icons a:hover {
+        color: #ffcc00; /* لون مختلف عند التحويم */
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+  
     <footer>
-        <p>&copy; <span id="copyright-year"></span> Ibrahim Alayan Interior Design. All rights reserved.</p>
+      <p>&copy; <span id="copyright-year"></span> Ibrahim Alayan Interior Design. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://wa.me/962790383135" target="_blank" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/10.5of/" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:naemabu432@gmail.com" title="Email">
+          <i class="far fa-envelope"></i>
+        </a>
+      </div>
     </footer>
+  
+    <script>
+      // تحديث سنة حقوق النشر تلقائياً
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+  
+
+    
     
     <script src="script.js"></script>
+    
 </body>
 </html>

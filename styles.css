@@ -91,3 +91,18 @@ footer {
     text-align: center;
     padding: 10px;
 }
+.social-icons a {
+    color: #fff; /* تأكد من أن لون الرابط أبيض */
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  /* للتأكد من أن جميع حالات الرابط (visited, hover, active) تحمل نفس اللون */
+  .social-icons a:link,
+  .social-icons a:visited,
+  .social-icons a:hover,
+  .social-icons a:active {
+    color: #fff;
+    text-decoration: none;
+  }
+  
