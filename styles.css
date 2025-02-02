@@ -1,101 +1,117 @@
-/* ضبط شكل نص الشعار */
+/* ===== تحسين نص الشعار ===== */
 .logo-container h4 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #412d68; /* اللون الذهبي الحقيقي */
-    text-shadow: 1px 1px 3px black; /* ظل أسود لإضافة عمق */
+    color: #CDA434; /* اللون الذهبي الفخم */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* ظل أكثر عمقًا */
 }
 
-/* تنسيق الهيدر */
+/* ===== تحسين الهيدر ===== */
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
     padding: 15px 20px;
-    background: #000; 
+    background: #111; /* أسود أنيق */
     color: white;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* ظل ناعم */
 }
 
-/* ضبط شعار الموقع */
+/* ===== تنسيق الشعار ===== */
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    margin-right: 5px;    
+    color: #CDA434; /* ذهبي */
 }
 
-/* شريط البحث */
+/* ===== تحسين شريط البحث ===== */
 .search-bar {
-    width: 48%;
-    padding: 8px;
+    width: 50%;
+    padding: 10px;
     border-radius: 40px;
-    border: none;
+    border: 2px solid #CDA434;
+    background: #222;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease-in-out;
 }
 
-/* تنسيق الروابط داخل الناف */
+.search-bar:focus {
+    background: #333;
+    border-color: #fff;
+}
+
+/* ===== تحسين الروابط ===== */
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 10px;
-    transition: color 0.3s;
+    margin-left: 15px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
 }
 
 nav a:hover {
-    color: #CDA434; /* تغيير اللون عند المرور */
+    color: #CDA434;
+    transform: scale(1.1);
 }
 
-/* خلفية الهيرو */
+/* ===== تحسين الهيرو ===== */
 .hero {
     position: relative;
     background: url('RYP.jpg') no-repeat center center/cover;
-    height: 60vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
 }
 
-/* التعتيم داخل الـ hero */
 .hero .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 600px;
+    font-size: 1.5rem;
 }
 
-/* قسم المنتجات */
+/* ===== تحسين المنتجات ===== */
 .product-section {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    background: #1a1a1a;
+    color: white;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
     padding: 20px;
 }
 
-/* تنسيق كروت المنتجات */
+/* ===== تحسين كروت المنتجات ===== */
 .product {
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #222;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
 .product img {
@@ -103,56 +119,66 @@ nav a:hover {
     border-radius: 10px;
 }
 
-/* الفوتر */
+/* ===== تحسين الفوتر ===== */
 footer {
-    background: #000;
+    background: #111;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    font-size: 1rem;
 }
 
-/* أيقونات التواصل الاجتماعي */
+/* ===== تحسين أيقونات التواصل الاجتماعي ===== */
 .social-icons {
     margin-top: 10px;
 }
 
 .social-icons a {
-    color: #fff; 
+    color: #fff;
     font-size: 24px;
     transition: color 0.3s, transform 0.3s;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 .social-icons a:hover {
-    color: #CDA434; /* تغيير اللون عند التمرير */
-    transform: scale(1.1);
+    color: #CDA434;
+    transform: scale(1.2);
 }
 
-/* قسم الصور الفاخرة */
+/* ===== تحسين الصور ===== */
 .image-container {
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 230px;
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.image-container {
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 15px; /* زوايا ناعمة */
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); /* ظل ناعم */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+    position: relative;
+    transition: box-shadow 0.4s ease-in-out;
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0.9;
+}
+
+.image-container:hover {
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
 }
 
 .image-container:hover img {
-    transform: scale(1.1); /* تكبير فقط للصورة */
+    transform: scale(1.1);
+    filter: brightness(1.3) contrast(1.1);
+    opacity: 1;
+}
+
+/* ===== تأثير Parallax عند تحريك الماوس ===== */
+.image-container img {
+    transform-origin: center;
+}
+
+.image-container:hover img {
+    transform: scale(1.1) translateY(-5px);
 }
