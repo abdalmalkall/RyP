@@ -1,245 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahem Alyan Interior Design</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f4f4f4;
-        }
-
-        /* ====== Header ====== */
-        header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            background: #000;
-            color: white;
-            padding: 15px 20px;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo {
-            max-height: 50px;
-        }
-
-        .logo-container h4 {
-            font-size: 1.2rem;
-        }
-
-        .search-bar {
-            width: 100%;
-            max-width: 400px;
-            padding: 8px;
-            border-radius: 40px;
-            border: none;
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-        }
-
-        /* ====== Hero Section ====== */
-        .hero {
-            position: relative;
-            background: url('RYP.jpg') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
-
-        .hero .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
-            padding: 15px;
-        }
-
-        /* ====== Product Section ====== */
-        .product-section {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .product {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .product img {
-            width: 100%;
-            max-width: 200px;
-            border-radius: 10px;
-        }
-
-        /* ====== Footer ====== */
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-icons a {
-            color: #fff;
-            font-size: 24px;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #ffcc00;
-            transform: scale(1.1);
-        }
-
-        /* ====== Responsive Design ====== */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            nav {
-                justify-content: center;
-                margin-top: 10px;
-            }
-
-            .hero {
-                height: 50vh;
-                padding: 10px;
-            }
-
-            .product-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                height: 40vh;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ibrahem Alyan Interior Design</title>
+  <!-- ربط ملف CSS الخارجي -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- ربط أيقونات Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="dfgd.png" alt="Logo" class="logo">
-            <h4>Ibrahim Alayan Interior Design</h4>
-        </div>
-        <input type="text" id="search-bar" placeholder="Search for designs..." class="search-bar">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Categories</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-
-    <div class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Interior Design Excellence</h1>
-            <p>Creating luxurious and artistic spaces tailored to you.</p>
-        </div>
+  <header>
+    <div class="logo-container">
+      <img src="dfgd.png" alt="Logo" class="logo" />
+      <h4>Ibrahim Alayan Interior Design</h4>
     </div>
+    <input type="text" id="search-bar" placeholder="Search for designs..." class="search-bar" />
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-    <section class="product-section">
-        <h2>Featured Designs</h2>
-        <div class="product-grid" id="product-grid">
-            <div class="product" data-name="Modern Living Room">
-                <img src="design1.jpg" alt="Interior Design 1">
-                <p>Modern Living Room</p>
-            </div>
-            <div class="product" data-name="Luxury Office Space">
-                <img src="design2.jpg" alt="Interior Design 2">
-                <p>Luxury Office Space</p>
-            </div>
-            <div class="product" data-name="Cozy Bedroom">
-                <img src="design3.jpg" alt="Interior Design 3">
-                <p>Cozy Bedroom</p>
-            </div>
-        </div>
-    </section>
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Interior Design Excellence</h1>
+      <p>Creating luxurious and artistic spaces tailored to you.</p>
+    </div>
+  </div>
 
-    <footer>
-        <p>&copy; <span id="copyright-year"></span> Ibrahim Alayan Interior Design. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="https://wa.me/962790383135" target="_blank" title="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://www.instagram.com/arch__ibrahem/" target="_blank" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="mailto:ibrahemalyan099@gmail.com" title="Email">
-                <i class="far fa-envelope"></i>
-            </a>
-        </div>
-    </footer>
+  <section class="product-section">
+    <h2>Featured Designs</h2>
+    <div class="product-grid" id="product-grid">
+      <div class="product" data-name="Modern Living Room">
+        <img src="design1.jpg" alt="Interior Design 1" />
+        <p>Modern Living Room</p>
+      </div>
+      <div class="product" data-name="Luxury Office Space">
+        <img src="design2.jpg" alt="Interior Design 2" />
+        <p>Luxury Office Space</p>
+      </div>
+      <div class="product" data-name="Cozy Bedroom">
+        <img src="design3.jpg" alt="Interior Design 3" />
+        <p>Cozy Bedroom</p>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // تحديث سنة حقوق النشر تلقائيًا
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
-    </script>
+  <footer>
+    <p>
+      &copy; <span id="copyright-year"></span>
+      Ibrahim Alayan Interior Design. All rights reserved.
+    </p>
+    <div class="social-icons">
+      <a href="https://wa.me/962790383135" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com/arch__ibrahem/" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:ibrahemalyan099@gmail.com" title="Email">
+        <i class="far fa-envelope"></i>
+      </a>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-
+  <!-- ربط ملف JavaScript الخارجي -->
+  <script src="script.js"></script>
 </body>
 </html>

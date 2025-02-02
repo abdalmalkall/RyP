@@ -8,35 +8,29 @@ if (copyrightEl) {
 const searchBar = document.getElementById("search-bar");
 if (searchBar) {
   searchBar.addEventListener("input", function () {
-    const searchQuery = this.value.toLowerCase();
+    const searchQuery = this.value.toLowerCase().trim();
     const products = document.querySelectorAll(".product");
 
     products.forEach(product => {
-      // الحصول على قيمة data-name والتأكد من وجودها
       const productName = product.getAttribute("data-name");
-      if (productName && productName.toLowerCase().includes(searchQuery)) {
-        product.style.display = "block";
-      } else {
-        product.style.display = "none";
-      }
+      product.style.display = productName && productName.toLowerCase().includes(searchQuery) ? "block" : "none";
     });
   });
 }
 
 // إضافة تأثير حركة Parallax للصور داخل .image-container
-const imageElements = document.querySelectorAll(".image-container img");
-if (imageElements.length > 0) {
-  imageElements.forEach((img) => {
+const imageContainers = document.querySelectorAll(".image-container img");
+if (imageContainers.length > 0) {
+  imageContainers.forEach(img => {
     img.addEventListener("mousemove", (e) => {
-      // حساب نسبة الحركة بناءً على موقع الماوس داخل الصورة
-      const x = (e.offsetX / img.clientWidth - 0.5) * 10;
-      const y = (e.offsetY / img.clientHeight - 0.5) * 10;
+      const { width, height } = img.getBoundingClientRect();
+      const x = ((e.clientX - img.offsetLeft) / width - 0.5) * 15;
+      const y = ((e.clientY - img.offsetTop) / height - 0.5) * 15;
       img.style.transform = `scale(1.1) translate(${x}px, ${y}px)`;
     });
 
     img.addEventListener("mouseleave", () => {
-      // إعادة تعيين الحركة عند مغادرة الماوس للصورة
-      img.style.transform = "scale(1.1) translate(0px, 0px)";
+      img.style.transform = "scale(1.0) translate(0, 0)";
     });
   });
 }

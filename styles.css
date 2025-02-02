@@ -1,30 +1,45 @@
-/* ===== تحسين نص الشعار ===== */
+/* ====== Reset ====== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1a1a1a;
+    color: white;
+}
+
+/* ====== Header ====== */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    max-height: 50px;
+}
+
 .logo-container h4 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #CDA434; /* اللون الذهبي الفخم */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* ظل أكثر عمقًا */
+    color: #CDA434;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* ===== تحسين الهيدر ===== */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background: #111; /* أسود أنيق */
-    color: white;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* ظل ناعم */
-}
-
-/* ===== تنسيق الشعار ===== */
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #CDA434; /* ذهبي */
-}
-
-/* ===== تحسين شريط البحث ===== */
 .search-bar {
     width: 50%;
     padding: 10px;
@@ -41,11 +56,16 @@ header {
     border-color: #fff;
 }
 
-/* ===== تحسين الروابط ===== */
+/* ====== Navigation ====== */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 15px;
     font-weight: bold;
     transition: color 0.3s, transform 0.2s;
 }
@@ -55,7 +75,7 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* ===== تحسين الهيرو ===== */
+/* ====== Hero Section ====== */
 .hero {
     position: relative;
     background: url('RYP.jpg') no-repeat center center/cover;
@@ -84,7 +104,7 @@ nav a:hover {
     font-size: 1.5rem;
 }
 
-/* ===== تحسين المنتجات ===== */
+/* ====== Product Section ====== */
 .product-section {
     text-align: center;
     padding: 30px;
@@ -99,7 +119,6 @@ nav a:hover {
     padding: 20px;
 }
 
-/* ===== تحسين كروت المنتجات ===== */
 .product {
     background: #222;
     padding: 15px;
@@ -119,7 +138,7 @@ nav a:hover {
     border-radius: 10px;
 }
 
-/* ===== تحسين الفوتر ===== */
+/* ====== Footer ====== */
 footer {
     background: #111;
     color: white;
@@ -128,8 +147,11 @@ footer {
     font-size: 1rem;
 }
 
-/* ===== تحسين أيقونات التواصل الاجتماعي ===== */
+/* ====== Social Icons ====== */
 .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     margin-top: 10px;
 }
 
@@ -137,7 +159,6 @@ footer {
     color: #fff;
     font-size: 24px;
     transition: color 0.3s, transform 0.3s;
-    margin: 0 10px;
 }
 
 .social-icons a:hover {
@@ -145,7 +166,7 @@ footer {
     transform: scale(1.2);
 }
 
-/* ===== تحسين الصور ===== */
+/* ====== Image Effects ====== */
 .image-container {
     width: 350px;
     height: 230px;
@@ -172,13 +193,4 @@ footer {
     transform: scale(1.1);
     filter: brightness(1.3) contrast(1.1);
     opacity: 1;
-}
-
-/* ===== تأثير Parallax عند تحريك الماوس ===== */
-.image-container img {
-    transform-origin: center;
-}
-
-.image-container:hover img {
-    transform: scale(1.1) translateY(-5px);
 }
