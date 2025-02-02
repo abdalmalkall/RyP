@@ -1,4 +1,3 @@
-/* ====== Reset ====== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,9 +8,10 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #1a1a1a;
     color: white;
+    /* إضافة اتجاه النص إلى اليمين */
+    direction: rtl;
 }
 
-/* ====== Header ====== */
 header {
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +21,8 @@ header {
     color: white;
     padding: 15px 20px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    /* إذا أردت عكس ترتيب العناصر في الـ header يمكنك استخدام: */
+    /* flex-direction: row-reverse; */
 }
 
 .logo-container {
@@ -186,11 +188,5 @@ footer {
 }
 
 .image-container:hover {
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
-}
-
-.image-container:hover img {
-    transform: scale(1.1);
-    filter: brightness(1.3) contrast(1.1);
-    opacity: 1;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
 }
