@@ -1,19 +1,21 @@
+/* ========== Global Styles ========== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Poppins', sans-serif;
     background: #1a1a1a;
     color: white;
-    /* إضافة اتجاه النص إلى اليمين */
-    direction: rtl;
-}
-
-header {
+    direction: rtl; /* Sets overall text flow to right-to-left */
+  }
+  
+  /* ========== Header ========== */
+  header {
     display: flex;
+    flex-direction: row-reverse; /* Reorders header items for RTL layout */
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -21,28 +23,27 @@ header {
     color: white;
     padding: 15px 20px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-    /* إذا أردت عكس ترتيب العناصر في الـ header يمكنك استخدام: */
-    /* flex-direction: row-reverse; */
-}
-
-.logo-container {
+  }
+  
+  .logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.logo {
+  }
+  
+  .logo {
     max-height: 50px;
-}
-
-.logo-container h4 {
+  }
+  
+  .logo-container h4 {
     font-size: 1.5rem;
     font-weight: bold;
     color: #CDA434;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.search-bar {
+  }
+  
+  /* ========== Search Bar ========== */
+  .search-bar {
     width: 50%;
     padding: 10px;
     border-radius: 40px;
@@ -51,34 +52,37 @@ header {
     color: white;
     outline: none;
     transition: all 0.3s ease-in-out;
-}
-
-.search-bar:focus {
+    direction: ltr;       /* Force left-to-right input direction */
+    text-align: left;     /* Aligns the text inside the search bar to the left */
+  }
+  
+  .search-bar:focus {
     background: #333;
     border-color: #fff;
-}
-
-/* ====== Navigation ====== */
-nav {
+  }
+  
+  /* ========== Navigation ========== */
+  nav {
     display: flex;
+    flex-direction: row-reverse; /* Ensures navigation items flow right-to-left */
     flex-wrap: wrap;
     gap: 15px;
-}
-
-nav a {
+  }
+  
+  nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s, transform 0.2s;
-}
-
-nav a:hover {
+  }
+  
+  nav a:hover {
     color: #CDA434;
     transform: scale(1.1);
-}
-
-/* ====== Hero Section ====== */
-.hero {
+  }
+  
+  /* ========== Hero Section ========== */
+  .hero {
     position: relative;
     background: url('RYP.jpg') no-repeat center center/cover;
     height: 70vh;
@@ -88,88 +92,88 @@ nav a:hover {
     text-align: center;
     color: white;
     box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
-}
-
-.hero .overlay {
+  }
+  
+  .hero .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-}
-
-.hero-content {
+  }
+  
+  .hero-content {
     position: relative;
     z-index: 2;
     max-width: 600px;
     font-size: 1.5rem;
-}
-
-/* ====== Product Section ====== */
-.product-section {
+  }
+  
+  /* ========== Product Section ========== */
+  .product-section {
     text-align: center;
     padding: 30px;
     background: #1a1a1a;
     color: white;
-}
-
-.product-grid {
+  }
+  
+  .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
     padding: 20px;
-}
-
-.product {
+  }
+  
+  .product {
     background: #222;
     padding: 15px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product:hover {
+  }
+  
+  .product:hover {
     transform: scale(1.07);
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
-}
-
-.product img {
+  }
+  
+  .product img {
     width: 100%;
     border-radius: 10px;
-}
-
-/* ====== Footer ====== */
-footer {
+  }
+  
+  /* ========== Footer ========== */
+  footer {
     background: #111;
     color: white;
     text-align: center;
     padding: 15px;
     font-size: 1rem;
-}
-
-/* ====== Social Icons ====== */
-.social-icons {
+  }
+  
+  /* ========== Social Icons ========== */
+  .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 10px;
-}
-
-.social-icons a {
+  }
+  
+  .social-icons a {
     color: #fff;
     font-size: 24px;
     transition: color 0.3s, transform 0.3s;
-}
-
-.social-icons a:hover {
+  }
+  
+  .social-icons a:hover {
     color: #CDA434;
     transform: scale(1.2);
-}
-
-/* ====== Image Effects ====== */
-.image-container {
+  }
+  
+  /* ========== Image Effects ========== */
+  .image-container {
     width: 350px;
     height: 230px;
     overflow: hidden;
@@ -177,16 +181,63 @@ footer {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
     position: relative;
     transition: box-shadow 0.4s ease-in-out;
-}
-
-.image-container img {
+  }
+  
+  .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     opacity: 0.9;
-}
-
-.image-container:hover {
+  }
+  
+  .image-container:hover {
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
-}
+  }
+  
+  /* ========== Responsive Styles ========== */
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .search-bar {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    nav {
+      width: 100%;
+      justify-content: space-around;
+    }
+  
+    .hero {
+      height: 50vh;
+    }
+  
+    .hero-content {
+      font-size: 1.2rem;
+      padding: 0 10px;
+    }
+  
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .logo-container h4 {
+      font-size: 1.2rem;
+    }
+  
+    nav a {
+      font-size: 0.9rem;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+    }
+  }
+  
