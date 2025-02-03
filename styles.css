@@ -9,12 +9,11 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: white;
-    direction: ltr; /* تعديل الاتجاه من اليمين لليسار إلى اليسار لليمين */
+    direction: ltr; 
     text-align: center;
     animation: backgroundAnimation 10s infinite alternate ease-in-out;
 }
 
-/* ========== متغيرات الخلفية المتغيرة ========== */
 @keyframes backgroundAnimation {
     0% { background: #101010; }
     25% { background: #181818; }
@@ -73,7 +72,7 @@ header {
     outline: none;
     transition: all 0.3s ease-in-out;
     font-size: 1rem;
-    text-align: left; /* تغيير الاتجاه في مربع البحث ليكون من اليسار لليمين */
+    text-align: left;
 }
 
 .search-bar:focus {
