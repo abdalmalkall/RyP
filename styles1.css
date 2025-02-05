@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    direction: ltr; 
+    text-align: center;
+    background: #181818;
+}
+
+/* ========== Header ========== */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #000000);
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+    border-bottom: 3px solid #CDA434;
+    width: 100%;
+}
+
+/* ========== Navigation ========== */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    padding: 20px 0;
+    background: #222;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+    border-bottom: 3px solid #CDA434;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    background: #333;
+}
+
+nav a:hover {
+    color: #CDA434;
+    background: rgba(255, 215, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* ========== Design Container ========== */
+.design-container {
+    text-align: center;
+    padding: 40px;
+    background: #181818;
+}
+
+.design-container img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(255, 174, 0, 0.1);
+}
+
+/* ========== Footer ========== */
+footer {
+    background: linear-gradient(105deg, #b38c4c, #000000 , #000000 , #b38c4c);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 1rem;
+    border-top: 3px solid #CDA434;
+    width: 100%;
+}
+
+/* ========== Social Icons ========== */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 28px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #CDA434;
+    transform: scale(1.3);
+}
