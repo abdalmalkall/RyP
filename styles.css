@@ -13,13 +13,20 @@ body {
     animation: backgroundAnimation 10s infinite alternate ease-in-out;
 }
 
+@keyframes backgroundAnimation {
+    0% { background: #0b0b0b; }
+    25% { background: #1c1c1c; }
+    50% { background: #2b2b2b; }
+    75% { background: #1c1c1c; }
+    100% { background: #6a5d3a; }
+}
 
 /* ========== Header ========== */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #000000, #000000);
+    background: linear-gradient(135deg, #2c2c2c, #1f1f1f);
     padding: 30px;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
     border-bottom: 3px solid #CDA434;
@@ -39,10 +46,10 @@ header {
 }
 
 .logo-container h4 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    color: #f8c948;
-    text-shadow: 4px 4px 12px rgb(228, 208, 208);
+    color: #CDA434;
+    text-shadow: 4px 4px 12px rgba(255, 215, 0, 0.5);
 }
 
 /* ========== Search Bar ========== */
@@ -58,8 +65,8 @@ header {
     max-width: 500px;
     padding: 15px;
     border-radius: 50px;
-    border: 2px solid #ffbb00;
-    background: #222;
+    border: 2px solid #CDA434;
+    background: #333;
     color: white;
     outline: none;
     transition: all 0.3s ease-in-out;
@@ -68,8 +75,8 @@ header {
 }
 
 .search-bar:focus {
-    background: #333;
-    border-color: #ffbb00;
+    background: #444;
+    border-color: #CDA434;
     transform: scale(1.05);
 }
 
@@ -110,7 +117,7 @@ nav a:hover {
     text-align: center;
     color: white;
     box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
-    border-bottom: 3px solid #ffbb00;
+    border-bottom: 3px solid #CDA434;
     width: 100%;
 }
 
@@ -127,17 +134,17 @@ nav a:hover {
     position: relative;
     z-index: 2;
     max-width: 650px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    text-shadow: 3px 3px 10px #ffbb00;
+    text-shadow: 3px 3px 10px #CDA434;
 }
 
 /* ========== Product Section ========== */
 .product-section {
     text-align: center;
     padding: 60px;
-    background: #181818;
-    color: rgb(228, 224, 224);
+    background: #2c2c2c;
+    color: white;
 }
 
 .product-grid {
@@ -148,7 +155,7 @@ nav a:hover {
 }
 
 .product {
-    background: linear-gradient(135deg, #222, #292929);
+    background: linear-gradient(135deg, #333, #444);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(255, 174, 0, 0.1);
@@ -157,7 +164,7 @@ nav a:hover {
 
 .product:hover {
     transform: scale(1.1);
-    box-shadow: 0 10px 30px #b38c4c(255, 215, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
 }
 
 .product img {
@@ -167,8 +174,7 @@ nav a:hover {
 
 /* ========== Footer ========== */
 footer {
-    background: linear-gradient(105deg, #b38c4c, #000000 , #000000 , #b38c4c);
-
+    background: linear-gradient(154deg,  #000000 ,#CDA434);
     color: white;
     text-align: center;
     padding: 25px;
@@ -186,7 +192,6 @@ footer {
 }
 
 .social-icons a {
-    
     color: #fff;
     font-size: 28px;
     transition: color 0.3s, transform 0.3s;
@@ -214,7 +219,6 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-    
     .logo-container h4 {
         font-size: 1.5rem;
     }

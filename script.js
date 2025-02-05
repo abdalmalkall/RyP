@@ -102,3 +102,22 @@ const observer = new IntersectionObserver((entries, observer) => {
 lazyImages.forEach(img => {
   observer.observe(img);
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const designName = new URLSearchParams(window.location.search).get("design");
+
+  if (designName) {
+      const imageElement = document.getElementById("design-image");
+      const titleElement = document.getElementById("design-title");
+      const descriptionElement = document.getElementById("design-description");
+
+      titleElement.textContent = designName;
+      imageElement.src = `images/${designName}.jpg`;
+      imageElement.onerror = function() {
+          console.log("Failed to load image.");
+          imageElement.src = "images/default.jpg"; // صورة افتراضية في حال فشل تحميل الصورة
+      };
+      descriptionElement.textContent = `Explore the details of our ${designName} design.`;
+  } else {
+      console.log("No design name found in the URL.");
+  }
+});
