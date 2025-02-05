@@ -8,7 +8,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: white;
-    direction: ltr; 
+    direction: ltr;
     text-align: center;
     background: #181818;
 }
@@ -96,4 +96,68 @@ footer {
 .social-icons a:hover {
     color: #CDA434;
     transform: scale(1.3);
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .design-container {
+        padding: 20px;
+    }
+
+    .design-container img {
+        width: 90%;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
+}
+
+/* ========== Very Small Screens (e.g., mobile phones in portrait mode) ========== */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .design-container img {
+        width: 100%;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+
+    .social-icons a {
+        font-size: 22px;
+    }
 }
