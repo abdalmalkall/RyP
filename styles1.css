@@ -1,4 +1,6 @@
 /* ========== General Reset ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +14,10 @@ body {
     direction: ltr;
     text-align: center;
     background: #181818;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6; /* زيادة المسافة بين الأسطر */
 }
 
 /* ========== Header ========== */
@@ -19,11 +25,39 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #000;
+    background: linear-gradient(135deg, #2c2c2c, #1f1f1f);
     padding: 20px;
     box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
     border-bottom: 3px solid #CDA434;
     width: 100%;
+}
+
+/* ========== Search Bar ========== */
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0; /* زيادة المسافة حول حقل البحث */
+}
+
+.search-bar {
+    width: 80%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 50px;
+    border: 2px solid #ffbb00;
+    background: #333;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    text-align: left;
+    transition: 0.3s ease-in-out;
+}
+
+.search-bar:focus {
+    background: #444;
+    border-color: #CDA434;
+    transform: scale(1.05);
 }
 
 /* ========== Navigation ========== */
@@ -37,6 +71,7 @@ nav {
     background: #222;
     box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
     border-bottom: 3px solid #CDA434;
+    margin-bottom: 20px; /* زيادة المسافة تحت الشريط العلوي */
 }
 
 nav a {
@@ -55,11 +90,50 @@ nav a:hover {
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
 }
 
+/* ========== Hero Section ========== */
+.hero {
+    position: relative;
+    background: url('RYP.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 217, 0);
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.7);
+    border-bottom: 4px solid #cda434;
+    width: 100%;
+    padding: 15px;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px #CDA434;
+    line-height: 1.6; /* زيادة المسافة بين الأسطر */
+}
+
 /* ========== Design Container ========== */
 .design-container {
     text-align: center;
     padding: 30px 10px;
     background: #181818;
+    height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .design-container img {
@@ -67,6 +141,15 @@ nav a:hover {
     max-width: 600px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(255, 174, 0, 0.1);
+    margin-bottom: 30px; /* زيادة المسافة بين الصورة والنص */
+}
+
+.design-text {
+    margin-top: 50px; /* زيادة المسافة بين النص والصورة */
+    font-size: 1.5rem;
+    color: #CDA434;
+    font-weight: bold;
+    line-height: 1.6; /* زيادة المسافة بين الأسطر */
 }
 
 /* ========== Footer ========== */
@@ -78,6 +161,8 @@ footer {
     font-size: 1rem;
     border-top: 3px solid #CDA434;
     width: 100%;
+    margin-top: 30px; /* زيادة المسافة بين المحتوى والتذييل */
+    line-height: 1.6; /* زيادة المسافة بين الأسطر */
 }
 
 /* ========== Social Icons ========== */
@@ -102,81 +187,33 @@ footer {
 
 /* ========== Responsive Design ========== */
 @media (max-width: 768px) {
-    header {
-        padding: 15px;
+    .hero {
+        height: 40vh;
     }
 
-    nav {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 0;
+    .hero-content {
+        font-size: 1.5rem;
     }
 
-    nav a {
-        font-size: 1rem;
-        padding: 6px 12px;
-    }
-
-    .design-container {
-        padding: 20px;
-    }
-
-    .design-container img {
-        width: 95%;
-    }
-
-    footer {
-        padding: 15px;
-        font-size: 0.9rem;
-    }
-
-    .social-icons {
-        gap: 10px;
-    }
-
-    .social-icons a {
-        font-size: 22px;
+    .search-bar {
+        width: 90%;
     }
 }
 
-/* ========== Very Small Screens (e.g., Mobile Portrait Mode) ========== */
 @media (max-width: 480px) {
-    body {
-        font-size: 14px;
+    .hero {
+        height: 35vh;
     }
 
-    nav a {
-        font-size: 0.9rem;
-        padding: 5px 10px;
+    .hero-content {
+        font-size: 1.3rem;
     }
 
-    .design-container img {
-        width: 100%;
+    .design-text {
+        font-size: 1.2rem;
     }
 
     footer {
-        padding: 10px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
-
-    .social-icons a {
-        font-size: 20px;
-    }
-}
-/* إخفاء المؤشر الافتراضي */
-body {
-    cursor: none;
-}
-
-/* تصميم المؤشر الذهبي */
-#custom-cursor {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: gold;
-    border-radius: 50%;
-    pointer-events: none;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
-    transition: transform 0.07s ease-out;
-    transform: translate(-50%, -50%);
 }
