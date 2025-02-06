@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             left: "0",
             width: "100%",
             backgroundColor: "#fff",
-            boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+            boxShadow: "0 4px 8px rgba(255, 255, 255, 0.1)",
             padding: "10px",
             display: "none"
         });
@@ -105,12 +105,4 @@ document.addEventListener("DOMContentLoaded", function () {
         if (descriptionElement) descriptionElement.textContent = `Explore the details of our ${designName} design.`;
     }
 
-    // مؤشر مخصص
-    const cursor = document.getElementById("custom-cursor");
-    if (cursor) {
-        document.addEventListener("mousemove", (event) => {
-            cursor.style.left = event.pageX + "px";
-            cursor.style.top = event.pageY + "px";
-        });
-    }
 });
