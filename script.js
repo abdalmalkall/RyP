@@ -24,35 +24,64 @@ document.addEventListener("DOMContentLoaded", function () {
             backgroundColor: "#fff",
             boxShadow: "0 4px 8px rgba(255, 255, 255, 0.1)",
             padding: "10px",
-            display: "none"
+            display: "none",
+            zIndex: "1000"
         });
         searchBar.parentNode.appendChild(resultsContainer);
 
-        searchBar.addEventListener("input", function () {
-            const searchQuery = this.value.toLowerCase().trim();
-            const products = document.querySelectorAll(".product");
-            let resultsFound = false;
-            resultsContainer.innerHTML = "";
+        let debounceTimeout;
 
-            products.forEach(product => {
-                const productName = product.getAttribute("data-name");
-                if (productName && productName.toLowerCase().includes(searchQuery)) {
-                    const resultItem = document.createElement("div");
-                    resultItem.textContent = productName;
-                    resultItem.style.padding = "5px";
-                    resultItem.style.cursor = "pointer";
-                    resultItem.addEventListener("click", () => {
-                        window.location.href = product.getAttribute("data-url");
-                    });
-                    resultsContainer.appendChild(resultItem);
-                    resultsFound = true;
-                }
-            });
-            resultsContainer.style.display = resultsFound ? "block" : "none";
+        searchBar.addEventListener("input", function () {
+            clearTimeout(debounceTimeout);
+            const searchQuery = this.value.toLowerCase().trim();
+            if (searchQuery === "") {
+                resultsContainer.style.display = "none";
+                return;
+            }
+
+            debounceTimeout = setTimeout(() => {
+                const products = document.querySelectorAll(".product");
+                let resultsFound = false;
+                resultsContainer.innerHTML = "";  // Clear previous results
+
+                products.forEach(product => {
+                    const productName = product.getAttribute("data-name");
+                    if (productName && productName.toLowerCase().includes(searchQuery)) {
+                        const resultItem = document.createElement("div");
+                        resultItem.textContent = productName;
+                        resultItem.style.padding = "5px";
+                        resultItem.style.cursor = "pointer";
+                        resultItem.style.transition = "background-color 0.3s ease";
+
+                        resultItem.addEventListener("click", () => {
+                            window.location.href = product.getAttribute("data-url");
+                        });
+
+                        resultItem.addEventListener("mouseenter", () => {
+                            resultItem.style.backgroundColor = "#f1f1f1";
+                        });
+
+                        resultItem.addEventListener("mouseleave", () => {
+                            resultItem.style.backgroundColor = "";
+                        });
+
+                        resultsContainer.appendChild(resultItem);
+                        resultsFound = true;
+                    }
+                });
+
+                resultsContainer.style.display = resultsFound ? "block" : "none";
+            }, 300);  // Debounce delay of 300ms
         });
 
         searchBar.addEventListener("blur", () => {
             resultsContainer.style.display = "none";
+        });
+
+        searchBar.addEventListener("focus", () => {
+            if (resultsContainer.childElementCount > 0) {
+                resultsContainer.style.display = "block";
+            }
         });
     }
 
@@ -104,5 +133,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if (descriptionElement) descriptionElement.textContent = `Explore the details of our ${designName} design.`;
     }
-
 });
