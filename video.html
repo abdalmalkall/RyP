@@ -3,61 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video</title>
-    <!-- ربط ملف CSS بشكل صحيح -->
-    <link rel="stylesheet" href="/video.css">
-    <div class="logo-container">
-        <h4>Ibrahim Alayan Interior Design</h4>
-    </div>
-<!-- FontAwesome CDN للأيقونات الاجتماعية -->
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="video.css">
+    <script defer src="video.js"></script>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
+    <!-- Navbar -->
     <header>
+        <div class="logo-container">
+            <h4>Ibrahim Alayan Interior Design</h4>
+        </div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="#product-section">Categories</a> <!-- Adjust the link to your section -->
-            <a href="#product-section1">Contact</a>
+            <a href="#categories">Categories</a>
+            <a href="#contact">Contact</a>
         </nav>
-        
-       
     </header>
 
+    <!-- Video Section -->
     <main>
         <div class="video-container">
-            <video id="video" controls>
-                <source src="/video.mp4" type="video/mp4">
+            <video id="video">
+                <source src="video.mp4" type="video/mp4">
                 Your browser does not support video playback.
             </video>
+            <div class="controls">
+                <button id="play-btn"><i class="fas fa-play"></i></button>
+                <input type="range" id="progress-bar" min="0" max="100" value="0">
+                <button id="mute-btn"><i class="fas fa-volume-up"></i></button>
+            </div>
         </div>
-        
-        <section class="product-section" id="product-section1">
-            <!-- محتوى المنتج هنا -->
-        </section>
     </main>
 
-  
-
+    <!-- Footer -->
     <footer>
         <p>&copy; <span id="copyright-year"></span> Ibrahim Alayan Interior Design. All rights reserved.</p>
         <div class="social-icons">
-            <a href="https://wa.me/962770777986" target="_blank" title="WhatsApp">
-                <i class="fab fa-whatsapp" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.instagram.com/arch__ibrahem/" target="_blank" title="Instagram">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a href="mailto:ibrahemalyan099@gmail.com" title="Email">
-                <i class="far fa-envelope" aria-hidden="true"></i>
-            </a>
+            <a href="https://wa.me/962770777986" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/arch__ibrahem/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:ibrahemalyan099@gmail.com"><i class="far fa-envelope"></i></a>
         </div>
     </footer>
 
-    <script src="/video.js"></script>
-
     <script>
-        // تحديث سنة حقوق الملكية بشكل ديناميكي
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
 </body>

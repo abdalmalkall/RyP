@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,24 +8,22 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif;
+    background: #0a0a0a;
     color: white;
-    background: #1a1a1a;
     text-align: center;
-    font-size: 14px;
-    /* Removed white-space: nowrap for natural text wrapping */
 }
 
+/* ====== الهيدر ====== */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #2c2c2c, #1f1f1f);
-    padding: 15px;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
-    border-bottom: 3px solid #CDA434;
+    background: linear-gradient(135deg, #111, #222);
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+    border-bottom: 3px solid #FFD700;
     width: 100%;
-    font-size: 1rem;
 }
 
 .logo-container {
@@ -33,20 +31,20 @@ header {
     align-items: center;
     gap: 15px;
     justify-content: center;
-    margin-bottom: 10px;
 }
 
 .logo {
-    max-height: 60px;
+    max-height: 65px;
 }
 
 .logo-container h4 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: #CDA434;
-    text-shadow: 3px 3px 8px rgba(255, 215, 0, 0.5);
+    color: #FFD700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
 }
 
+/* ====== البحث ====== */
 .search-container {
     width: 100%;
     display: flex;
@@ -58,22 +56,21 @@ header {
     width: 80%;
     max-width: 350px;
     padding: 12px;
-    border-radius: 50px;
-    border: 2px solid #ffbb00;
-    background: #333;
+    border-radius: 30px;
+    border: 2px solid #FFD700;
+    background: #222;
     color: white;
-    outline: none;
     font-size: 1rem;
-    /* Center aligned text for consistency on small screens */
     transition: 0.3s ease-in-out;
 }
 
 .search-bar:focus {
-    background: #444;
-    border-color: #CDA434;
+    background: #333;
+    border-color: #FFA500;
     transform: scale(1.05);
 }
 
+/* ====== القائمة ====== */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -88,41 +85,31 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-    padding: 8px 12px;
+    padding: 8px 15px;
     border-radius: 6px;
     transition: 0.3s ease-in-out;
 }
 
 nav a:hover {
-    color: #CDA434;
-    transform: scale(1.2);
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    color: black;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+    transform: scale(1.1);
 }
 
+/* ====== قسم البطل ====== */
 .hero {
     position: relative;
     background: url('RYP.jpg') no-repeat center center/cover;
-    height: 50vh;
+    height: 55vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: rgb(255, 217, 0);
-    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.7);
-    border-bottom: 4px solid #cda434;
+    color: #FFD700;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+    border-bottom: 4px solid #FFD700;
     width: 100%;
-    padding: 0;
-}
-
-.hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.hero:hover img {
-    transform: scale(1.1);
 }
 
 .hero .overlay {
@@ -131,23 +118,22 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
-    text-shadow: 2px 2px 8px #CDA434;
-    padding: 0 10px; /* Added padding to prevent text overflow on smaller devices */
+    text-shadow: 2px 2px 10px #FFD700;
 }
 
+/* ====== المنتجات ====== */
 .product-section {
     text-align: center;
-    padding: 30px 10px;
-    background: #2c2c2c;
-    color: white;
+    padding: 40px 10px;
+    background: #1a1a1a;
 }
 
 .product-grid {
@@ -158,31 +144,31 @@ nav a:hover {
 }
 
 .product {
-    background: linear-gradient(135deg, #333, #444);
+    background: linear-gradient(135deg, #222, #333);
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(255, 174, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
 }
 
 .product img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
+/* ====== الفوتر ====== */
 footer {
     background: #000;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     font-size: 1rem;
-    border-top: 3px solid #CDA434;
-    width: 100%;
+    border-top: 3px solid #FFD700;
 }
 
 .social-icons {
@@ -193,30 +179,21 @@ footer {
 }
 
 .social-icons a {
-    color: #CDA434;
-    font-size: 26px;
+    color: #FFD700;
+    font-size: 28px;
     transition: color 0.3s, transform 0.3s;
 }
 
 .social-icons a:hover {
-    color: #CDA434;
-    transform: scale(1.3);
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 1);
+    transform: scale(1.2);
 }
 
-/* Tablet breakpoint for improved scaling on medium screens */
+/* ====== التصميم المتجاوب ====== */
 @media (max-width: 1024px) {
-    header {
-        font-size: 0.9rem;
-    }
-    .logo-container h4 {
-        font-size: 1.6rem;
-    }
-    nav a {
-        font-size: 1rem;
-    }
     .hero-content {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 }
 
@@ -225,7 +202,7 @@ footer {
         height: 45vh;
     }
     .hero-content {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
     .search-bar {
         width: 90%;
@@ -239,22 +216,13 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .logo-container h4 {
-        font-size: 1.5rem;
-    }
-    nav a {
-        font-size: 0.9rem;
-    }
     .hero {
         height: 40vh;
     }
     .hero-content {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     footer {
-        font-size: 0.8rem;
-    }
-    .product {
-        padding: 15px;
+        font-size: 0.85rem;
     }
 }
