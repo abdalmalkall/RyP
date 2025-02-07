@@ -1,4 +1,4 @@
-/* استيراد خط Poppins */
+/* استيراد خط Poppins */ 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 /* تنسيق عام */
@@ -93,8 +93,9 @@ video {
 
 .controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* يجعل الأزرار بجانب بعضها */
     align-items: center;
+    gap: 15px; /* يضيف مسافة بين الأزرار */
     background: rgba(0, 0, 0, 0.85);
     padding: 12px;
     position: absolute;
