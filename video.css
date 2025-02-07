@@ -1,60 +1,75 @@
-/* استيراد خط فاخر */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&display=swap');
+/* استيراد خط Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 /* تنسيق عام */
-body {
-    font-family: 'Playfair Display', serif;
-    background-color: #0a0a0a;
-    color: white;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1a1a1a;
+    color: white;
     text-align: center;
+    font-size: 14px;
 }
 
 /* Navbar */
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 15px 5%;
-    background: linear-gradient(90deg, #111, #222);
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
-    border-bottom: 2px solid #FFD700;
+    background: linear-gradient(135deg, #2c2c2c, #1f1f1f);
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+    border-bottom: 3px solid #CDA434;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .logo-container h4 {
-    color: #FFD700;
-    font-size: 24px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 10px rgba(255, 165, 0, 0.6);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #CDA434;
+    text-shadow: 3px 3px 8px rgba(255, 215, 0, 0.5);
 }
 
 nav {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
+    width: 100%;
+    padding: 15px 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
-    transition: 0.3s ease;
-    padding: 8px 15px;
-    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
 }
 
 nav a:hover {
-    background: linear-gradient(90deg, #FFD700, #FFA500);
-    color: black;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
-    transform: scale(1.1);
+    color: #CDA434;
+    transform: scale(1.2);
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
 }
 
-/* Video Container */
+/* فيديو */
 .video-container {
     position: relative;
     width: 85%;
@@ -72,9 +87,10 @@ video {
     display: block;
     border-radius: 15px;
     cursor: pointer;
+    object-fit: cover;
+    max-height: 600px;
 }
 
-/* Custom Controls */
 .controls {
     display: flex;
     justify-content: space-between;
@@ -112,49 +128,44 @@ video {
 
 /* Footer */
 footer {
-    margin-top: 60px;
-    padding: 25px;
-    background: #111;
-    border-top: 2px solid #FFD700;
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    border-top: 3px solid #CDA434;
+    width: 100%;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 18px;
+    gap: 20px;
+    margin-top: 10px;
 }
 
 .social-icons a {
-    color: #FFD700;
-    font-size: 28px;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
+    color: #CDA434;
+    font-size: 26px;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .social-icons a:hover {
-    color: white;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 1);
-    transform: scale(1.2);
+    color: #CDA434;
+    transform: scale(1.3);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
 }
 
-/* Responsive Design */
+/* تصميم متجاوب */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .video-container {
         width: 95%;
     }
-
     .controls {
         padding: 10px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
     }
 }
