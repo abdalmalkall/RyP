@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchBar = document.getElementById("search-bar");
     const searchButton = document.getElementById("search-button");
     const products = document.querySelectorAll(".product");
+    const noResultsMessage = document.createElement("p");
+    noResultsMessage.textContent = "There are no matching products.";
+    noResultsMessage.style.display = "none"; // إخفاء الرسالة في البداية
+    document.querySelector(".product-section").appendChild(noResultsMessage);
 
     function filterProducts() {
         const searchQuery = searchBar.value.toLowerCase().trim();
@@ -31,9 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        if (!found) {
-            console.log("No matching products found.");
-        }
+        // عرض أو إخفاء رسالة عدم وجود نتائج
+        noResultsMessage.style.display = found ? "none" : "block";
     }
 
     searchBar.addEventListener("input", filterProducts);
