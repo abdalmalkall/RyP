@@ -13,13 +13,13 @@ body {
     background: #1a1a1a;
     text-align: center;
     font-size: 14px;
-    /* Removed white-space: nowrap for natural text wrapping */
 }
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background: linear-gradient(135deg, #2c2c2c, #1f1f1f);
     padding: 15px;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
@@ -36,10 +36,6 @@ header {
     margin-bottom: 10px;
 }
 
-.logo {
-    max-height: 60px;
-}
-
 .logo-container h4 {
     font-size: 1.8rem;
     font-weight: bold;
@@ -51,27 +47,44 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 10px 0;
+    position: relative;
 }
 
 .search-bar {
     width: 80%;
     max-width: 350px;
-    padding: 12px;
+    padding: 12px 15px;
     border-radius: 50px;
     border: 2px solid #ffbb00;
     background: #333;
     color: white;
     outline: none;
     font-size: 1rem;
-    /* Center aligned text for consistency on small screens */
     transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding-right: 35px; /* Leave space for the icon */
 }
 
 .search-bar:focus {
     background: #444;
     border-color: #CDA434;
-    transform: scale(1.05);
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #ffbb00;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.search-button:hover {
+    color: #CDA434;
 }
 
 nav {
@@ -140,7 +153,7 @@ nav a:hover {
     font-size: 2rem;
     font-weight: bold;
     text-shadow: 2px 2px 8px #CDA434;
-    padding: 0 10px; /* Added padding to prevent text overflow on smaller devices */
+    padding: 0 10px;
 }
 
 .product-section {
@@ -204,57 +217,88 @@ footer {
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
 }
 
-/* Tablet breakpoint for improved scaling on medium screens */
-@media (max-width: 1024px) {
+/* Media Queries */
+@media (max-width: 768px) {
     header {
         font-size: 0.9rem;
+        padding: 10px;
     }
-    .logo-container h4 {
-        font-size: 1.6rem;
-    }
-    nav a {
-        font-size: 1rem;
-    }
-    .hero-content {
-        font-size: 1.8rem;
-    }
-}
 
-@media (max-width: 768px) {
-    .hero {
-        height: 45vh;
-    }
-    .hero-content {
-        font-size: 1.6rem;
-    }
-    .search-bar {
-        width: 90%;
-    }
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    footer {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
     .logo-container h4 {
         font-size: 1.5rem;
     }
-    nav a {
+
+    .search-bar {
+        width: 90%;
+        max-width: 300px;
         font-size: 0.9rem;
     }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
     .hero {
         height: 40vh;
     }
+
+    .hero-content {
+        font-size: 1.5rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+    .social-icons a {
+        font-size: 22px;
+    }
+}
+
+/* For smaller screens like mobile */
+@media (max-width: 480px) {
+    .logo-container h4 {
+        font-size: 1.2rem;
+    }
+
+    .search-bar {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        height: 35vh;
+    }
+
     .hero-content {
         font-size: 1.3rem;
     }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
     footer {
         font-size: 0.8rem;
     }
-    .product {
-        padding: 15px;
+
+    .social-icons a {
+        font-size: 20px;
     }
-} 
+}

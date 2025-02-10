@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Render Your Plan</title>
-
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -15,11 +14,17 @@
     <div class="logo-container">
       <h4>Ibrahem Alyan Interior Design</h4>
     </div>
-    <input type="text" id="search-bar" placeholder="Search for designs..." class="search-bar" />
+    <!-- خانة البحث -->
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search for designs..." class="search-bar" />
+      <button id="search-button" class="search-button">
+        <i class="fas fa-search"></i> <!-- علامة البحث -->
+      </button>
+    </div>
   </header>
   <nav>
     <a href="index.html">Home</a>
-    <a href="#product-section">Categories</a> <!-- تعديل الرابط هنا -->
+    <a href="#product-section">Categories</a>
     <a href="#product-section1">Contact</a>
   </nav>
   <div class="hero">
@@ -30,7 +35,6 @@
     </div>
   </div>
 
-  <!-- إضافة id للقسم الذي يحتوي على الصور -->
   <section class="product-section" id="product-section">
     <h2>Featured Designs</h2>
     <div class="product-grid">
@@ -53,10 +57,7 @@
     </div>
   </section>
 
-  <!-- قسم فارغ لاستخدامه لاحقًا -->
-  <section class="product-section" id="product-section1">
-    <!-- يمكن إضافة محتوى هنا لاحقًا -->
-  </section>
+  <section class="product-section" id="product-section1"></section>
 
   <footer>
     <p>&copy; <span id="copyright-year"></span> Ibrahim Alayan Interior Design. All rights reserved.</p>
@@ -73,10 +74,6 @@
     </div>
   </footer>
 
-  <script>
-    // Update the copyright year dynamically
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-  </script>
   <script src="script.js"></script>
 </body>
 </html>
