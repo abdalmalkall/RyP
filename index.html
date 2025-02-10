@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Render Your Plan</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- ربط FontAwesome للحصول على أيقونة البحث -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -15,7 +14,6 @@
     <div class="logo-container">
       <h4>Ibrahem Alyan Interior Design</h4>
     </div>
-    <!-- خانة البحث -->
     <div class="search-container">
       <input type="text" id="search-bar" placeholder="Search for designs..." class="search-bar" />
       <button id="search-button" class="search-button">
@@ -26,7 +24,7 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="#product-section">Categories</a>
-    <a href="#product-section1">Contact</a>
+    <a href="#contact-section">Contact</a>
   </nav>
   <div class="hero">
     <div class="overlay"></div>
@@ -40,25 +38,22 @@
     <div class="product-grid">
       <div class="product" data-name="Modern Living Room">
         <a href="design-details.html?design=Modern%20Living%20Room">
-          <img src="ryp.jpg" alt="Modern Living Room" />
+          <img src="ryp.webp" alt="Modern Living Room" loading="lazy" />
         </a>
         <p>Luxury designs</p>
       </div>
       <div class="product" data-name="Luxury Office Space">
         <a href="video.html">
-          <img src="design2.jpg" alt="Luxury Office Space" class="video-thumbnail" />
+          <img src="design2.webp" alt="Luxury Office Space" class="video-thumbnail" loading="lazy" />
         </a>
         <p>3D designs</p>
       </div>
       <div class="product" data-name="Cozy Bedroom">
-        <img src="design3.jpg" alt="Cozy Bedroom" />
+        <img src="design3.webp" alt="Cozy Bedroom" loading="lazy" />
         <p>Cozy Bedroom</p>
       </div>
     </div>
   </section>
-
-  <section class="product-section" id="product-section1"></section>
-
   <footer>
     <p>&copy; <span id="copyright-year"></span>
       Ibrahim Alayan Interior Design. All rights reserved.
@@ -75,7 +70,6 @@
       </a>
     </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>

@@ -127,7 +127,7 @@
   /* تنسيق القسم الرئيسي "hero" */
   .hero {
     position: relative;
-    background: url('RYP.jpg') no-repeat center center/cover;
+    background: url('RYP.webp') no-repeat center center/cover;
     height: 50vh;
     display: flex;
     align-items: center;
