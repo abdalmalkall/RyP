@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Render Your Plan</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- ربط FontAwesome للحصول على أيقونة البحث -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -18,7 +19,7 @@
     <div class="search-container">
       <input type="text" id="search-bar" placeholder="Search for designs..." class="search-bar" />
       <button id="search-button" class="search-button">
-        <i class="fas fa-search"></i> <!-- علامة البحث -->
+        <i class="fas fa-search"></i>
       </button>
     </div>
   </header>
@@ -34,23 +35,22 @@
       <p>Creating luxurious and artistic spaces tailored to you</p>
     </div>
   </div>
-
   <section class="product-section" id="product-section">
     <h2>Featured Designs</h2>
     <div class="product-grid">
-      <div class="product">
+      <div class="product" data-name="Modern Living Room">
         <a href="design-details.html?design=Modern%20Living%20Room">
           <img src="ryp.jpg" alt="Modern Living Room" />
         </a>
         <p>Luxury designs</p>
       </div>
-      <div class="product">
+      <div class="product" data-name="Luxury Office Space">
         <a href="video.html">
           <img src="design2.jpg" alt="Luxury Office Space" class="video-thumbnail" />
         </a>
         <p>3D designs</p>
       </div>
-      <div class="product">
+      <div class="product" data-name="Cozy Bedroom">
         <img src="design3.jpg" alt="Cozy Bedroom" />
         <p>Cozy Bedroom</p>
       </div>
@@ -60,7 +60,9 @@
   <section class="product-section" id="product-section1"></section>
 
   <footer>
-    <p>&copy; <span id="copyright-year"></span> Ibrahim Alayan Interior Design. All rights reserved.</p>
+    <p>&copy; <span id="copyright-year"></span>
+      Ibrahim Alayan Interior Design. All rights reserved.
+    </p>
     <div class="social-icons">
       <a href="https://wa.me/962770777986" target="_blank" title="WhatsApp">
         <i class="fab fa-whatsapp"></i>
