@@ -105,7 +105,7 @@ header {
 /* تحسين العرض على الأجهزة المحمولة */
 @media (max-width: 768px) {
   .search-button i {
-    padding: 10px 5px;
+    padding: 9px 5px;
   }
 
   .search-button:hover {
