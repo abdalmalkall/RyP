@@ -1,43 +1,55 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const video = document.getElementById("video");
-    const playButton = document.getElementById("play-btn");
-    const muteButton = document.getElementById("mute-btn");
-    const progressBar = document.getElementById("progress-bar");
+    // تعامل مع جميع الفيديوهات
+    const videos = document.querySelectorAll("video");
+    const playButtons = document.querySelectorAll(".play-btn");
+    const muteButtons = document.querySelectorAll(".mute-btn");
+    const progressBars = document.querySelectorAll(".progress-bar");
 
-    // Play/Pause Video
-    playButton.addEventListener("click", function () {
-        if (video.paused) {
-            video.play();
-            playButton.innerHTML = '<i class="fas fa-pause"></i>';
-        } else {
-            video.pause();
-            playButton.innerHTML = '<i class="fas fa-play"></i>';
-        }
-    });
+    // التكرار عبر جميع الفيديوهات وإضافة التحكمات
+    videos.forEach((video, index) => {
+        const playButton = playButtons[index];
+        const muteButton = muteButtons[index];
+        const progressBar = progressBars[index];
 
-    // Mute/Unmute Video
-    muteButton.addEventListener("click", function () {
-        video.muted = !video.muted;
-        muteButton.innerHTML = video.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
-    });
+        // Play/Pause Video
+        playButton.addEventListener("click", function () {
+            if (video.paused) {
+                video.play();
+                playButton.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                video.pause();
+                playButton.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        });
 
-    // Update Progress Bar
-    video.addEventListener("timeupdate", function () {
-        const progress = (video.currentTime / video.duration) * 100;
-        progressBar.value = progress;
-    });
+        // Mute/Unmute Video
+        muteButton.addEventListener("click", function () {
+            video.muted = !video.muted;
+            muteButton.innerHTML = video.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+        });
 
-    // Seek Video
-    progressBar.addEventListener("input", function () {
-        const seekTime = (progressBar.value / 100) * video.duration;
-        video.currentTime = seekTime;
+        // Update Progress Bar
+        video.addEventListener("timeupdate", function () {
+            const progress = (video.currentTime / video.duration) * 100;
+            progressBar.value = progress;
+        });
+
+        // Seek Video
+        progressBar.addEventListener("input", function () {
+            const seekTime = (progressBar.value / 100) * video.duration;
+            video.currentTime = seekTime;
+        });
     });
 
     // Pause when leaving the page
     document.addEventListener("visibilitychange", function () {
         if (document.hidden) {
-            video.pause();
-            playButton.innerHTML = '<i class="fas fa-play"></i>';
+            videos.forEach(video => video.pause());
+            playButtons.forEach(button => button.innerHTML = '<i class="fas fa-play"></i>');
         }
     });
+
+    // Update copyright year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
 });
+
