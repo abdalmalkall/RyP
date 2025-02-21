@@ -62,11 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-
-
 // إنشاء العنصر الرئيسي لشاشة الترحيب
 const splashScreen = document.createElement("div");
 splashScreen.style.position = "fixed";
@@ -134,7 +129,7 @@ setTimeout(() => {
     }, 1000);
 }, 2500);
 
-// إضافhhة أنيميشن عبر CSS
+// إضافة أنيميشن عبر CSS
 const style = document.createElement("style");
 style.innerHTML = `
     @keyframes fadeIn {
