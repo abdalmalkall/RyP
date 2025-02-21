@@ -75,28 +75,46 @@ header {
 .search-button {
   position: absolute;
   right: 5px;
-  padding: 12px 18px;
+  padding: 10px 10px;
   border: none;
   border-radius: 50%;
   background: linear-gradient(135deg, #ffbb00, #CDA434);
   color: white;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
 }
-
-.search-button i {
-  font-size: 1.2rem;
+.search-button {
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
+.search-button i {
+  font-size: 1.3rem;
+}
+
+/* التأثير عند المرور بالماوس للشاشات الكبيرة */
 .search-button:hover {
   transform: scale(1.1);
   background: linear-gradient(135deg, #CDA434, #ffdd55);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+  box-shadow: 6px 6px 20px rgba(255, 215, 0, 0.6);
 }
+
+/* تحسين العرض على الأجهزة المحمولة */
+@media (max-width: 768px) {
+  .search-button i {
+    font-size: 1.1rem;
+  }
+  
+  .search-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #CDA434, #ffdd55);
+    box-shadow: 4px 4px 15px rgba(255, 215, 0, 0.5);
+  }
+}
+
 
 /* تنسيق عناصر التنقل */
 nav {
