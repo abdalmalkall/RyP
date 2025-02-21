@@ -134,7 +134,7 @@ setTimeout(() => {
     }, 1000);
 }, 2500);
 
-// إضافة أنيميشن عبر CSS
+// إضافhhة أنيميشن عبر CSS
 const style = document.createElement("style");
 style.innerHTML = `
     @keyframes fadeIn {
