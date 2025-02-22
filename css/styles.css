@@ -91,7 +91,7 @@ header {
 
 .search-button i {
   font-size: 1.3rem;
-  color: white; /* تحديد اللون الأبيض للأيقونة */
+  color: rgba(255, 215, 0, 0.6) /* تحديد اللون الأبيض للأيقونة */
 }
 
 .search-button:hover {
