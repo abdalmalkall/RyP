@@ -81,7 +81,7 @@ document.body.appendChild(splashScreen);
 
 // اللوجو
 const logo = document.createElement("img");
-logo.src = "favicon.ico";
+logo.src = "./Image/favicon.ico";
 logo.style.width = "15vw";
 logo.style.maxWidth = "150px";
 logo.style.height = "auto";

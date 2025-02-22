@@ -1,3 +1,6 @@
+/* استيراد خط Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 /* الأنماط العامة */
 * {
   box-sizing: border-box;
@@ -87,39 +90,18 @@ header {
   justify-content: center;
   box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
 }
-.search-button {
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-}
 
-.search-button i {
-  font-size: 1.3rem;
-}
-
-/* التأثير عند المرور بالماوس للشاشات الكبيرة */
 .search-button:hover {
   transform: scale(1.1);
   background: linear-gradient(135deg, #cda434, #ffdd55);
   box-shadow: 6px 6px 20px rgba(255, 215, 0, 0.6);
 }
 
-/* تحسين العرض على الأجهزة المحمولة */
-@media (max-width: 768px) {
-  .search-button i {
-    padding: 9px 5px;
-  }
-
-  .search-button:hover {
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #cda434, #ffdd55);
-    box-shadow: 4px 4px 15px rgba(255, 215, 0, 0.5);
-  }
-}
-
 /* تنسيق عناصر التنقل */
 nav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-direction: row; /* ترتيب العناصر بجانب بعض */
   gap: 20px;
   width: 100%;
   padding: 15px 0;
@@ -161,7 +143,7 @@ nav a:hover {
 /* تنسيق القسم الرئيسي "hero" */
 .hero {
   position: relative;
-  background: url("RYP.webp") no-repeat center center/cover;
+  background: url("../Image/RYP.webp") no-repeat center center/cover;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -191,37 +173,62 @@ nav a:hover {
   padding: 0 10px;
 }
 
-/* تنسيق أقسام المنتجات */
-.product-section {
-  text-align: center;
-  padding: 30px 10px;
-  background: #2c2c2c;
-  color: white;
+/* تنسيق الفيديو */
+.video-container {
+  position: relative;
+  width: 85%;
+  max-width: 1000px;
+  margin: 60px auto;
+  background: black;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.7);
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.product {
-  background: linear-gradient(135deg, #333, #444);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(255, 174, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
-}
-
-.product img {
+video {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  cursor: pointer;
+  object-fit: cover;
+  max-height: 600px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center; /* يجعل الأزرار بجانب بعضها */
+  align-items: center;
+  gap: 15px; /* يضيف مسافة بين الأزرار */
+  background: rgba(0, 0, 0, 0.85);
+  padding: 12px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(6px);
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: #FFD700;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.controls button:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+#progress-bar {
+  flex: 1;
+  margin: 0 10px;
+  cursor: pointer;
+  height: 6px;
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  border-radius: 12px;
 }
 
 /* تنسيق الفوتر */
