@@ -162,7 +162,7 @@ nav a:hover {
 .hero {
   position: relative;
   background: url("../Image/RYP.webp") no-repeat center center/cover;
-  height: 50vh;
+  height: 55vh;
   display: flex;
   align-items: center;
   justify-content: center;
