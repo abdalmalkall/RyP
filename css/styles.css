@@ -1,4 +1,7 @@
-/* الأنماط العامة */
+/* ================== استيراد الخطوط ================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@1,500&display=swap");
+
+/* ================== القواعد العامة ================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +17,7 @@ body {
   font-size: 14px;
 }
 
-/* تنسيق الهيدر */
+/* ================== الهيدر ================== */
 header {
   display: flex;
   flex-direction: column;
@@ -22,13 +25,13 @@ header {
   justify-content: center;
   background: linear-gradient(135deg, #2c2c2c, #1f1f1f);
   padding: 15px;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
-  border-bottom: 3px solid #cda434;
+  box-shadow: 0 4px 15px rgb(0, 49, 58);
+  border-bottom: 3px solid #0059ff00;
   width: 100%;
   font-size: 1rem;
 }
 
-/* تنسيق الشعار */
+/* الشعار */
 .logo-container {
   display: flex;
   align-items: center;
@@ -40,125 +43,64 @@ header {
 .logo-container h4 {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #cda434;
-  text-shadow: 3px 3px 8px rgba(255, 215, 0, 0.5);
+  color: #ffffff;
+  text-shadow: 3px 3px 8px rgb(0, 66, 104);
 }
 
-
-.logo-container h4::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--luxury-gold);
-  transition: width 0.3s ease;
-}
-
-.logo-container:hover h4::after {
-  width: 100%;
-}
-/* صندوق بحث فخم - مستوحى من الذكاء الاصطناعي */
-
+/* ================== شريط البحث ================== */
 .search-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(135deg, rgba(10, 10, 10, 0.7), rgba(30, 30, 30, 0.8));
-  border: 1px solid rgba(212, 175, 55, 0.15);
-  border-radius: 60px;
-  padding: 0.5rem 0.8rem;
-  backdrop-filter: blur(15px);
-  box-shadow:
-    0 0 10px rgba(212, 175, 55, 0.1),
-    0 0 60px rgba(212, 175, 55, 0.06),
-    inset 0 0 8px rgba(255, 255, 255, 0.02);
-  max-width: 400px;
-  margin: auto;
+  justify-content: center;
+  margin: 15px 0;
   position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease-in-out;
-}
-
-.search-container::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(from 90deg at 50% 50%, #d4af37, transparent, #b88f2b, transparent, #d4af37);
-  animation: rotateGlow 6s linear infinite;
-  opacity: 0.07;
-  z-index: 0;
-}
-
-@keyframes rotateGlow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 
 .search-bar {
   flex: 1;
-  background: transparent;
-  border: none;
-  padding: 0.6rem 1rem;
+  max-width: 400px;
+  padding: 14px 20px;
+  border: 2px solid #00425c;
+  border-radius: 50px;
+  background: #222;
+  color: white;
+  outline: none;
   font-size: 1rem;
-  color: var(--luxury-gold);
-  font-family: 'Tajawal', sans-serif;
-  letter-spacing: 0.5px;
-  position: relative;
-  z-index: 1;
+  transition: 0.3s ease-in-out;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-.search-bar::placeholder {
-  color: rgba(212, 175, 55, 0.3);
-  font-style: italic;
+.search-bar:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(133, 131, 122, 0.6);
 }
 
 .search-button {
-  background: radial-gradient(circle at 30% 30%, #d4af37, #b88f2b);
+  position: absolute;
+  right: 5px;
+  padding: 10px;
   border: none;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  color: black;
-  font-size: 1.1rem;
+  background: transparent;
+  color: white;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  box-shadow:
-    0 6px 14px rgba(212, 175, 55, 0.4),
-    inset 0 1px 2px rgba(255, 255, 255, 0.25);
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s ease;
+  box-shadow: none;
+  border-radius: 0;
+  width: auto;
+}
 
-
+.search-button i {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .search-button:hover {
-  transform: scale(1.15);
-  box-shadow:
-    0 10px 20px rgba(212, 175, 55, 0.6),
-    inset 0 1px 2px rgba(255, 255, 255, 0.3);
-  background: radial-gradient(circle at 70% 30%, #ffdc73, #d4af37);
-}
-.search-button:focus {
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.4); /* أو احذفه بالكامل */
-}
-.search-button:active {
-  transform: scale(0.95);
-  box-shadow:
-    0 3px 8px rgba(212, 175, 55, 0.5),
-    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
 }
 
-
-
-/* تنسيق عناصر التنقل */
+/* ================== التنقل ================== */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -186,7 +128,7 @@ nav a::after {
   bottom: 0;
   width: 0;
   height: 2px;
-  background: #cda434;
+  background: #044d6e;
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -196,12 +138,12 @@ nav a:hover::after {
 }
 
 nav a:hover {
-  color: #cda434;
+  color: #ffffff;
   transform: scale(1.2);
-  text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+  text-shadow: 0 0 15px rgba(10, 97, 119, 0.8);
 }
 
-/* تنسيق القسم الرئيسي "hero" */
+/* ================== قسم البطل ================== */
 .hero {
   position: relative;
   background: url("../Image/RYP.webp") no-repeat center center/cover;
@@ -210,9 +152,9 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: rgb(255, 217, 0);
+  color: rgb(72, 214, 219);
   box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.7);
-  border-bottom: 4px solid #cda434;
+  border-bottom: 4px solid #ffffff;
   width: 100%;
 }
 
@@ -230,11 +172,11 @@ nav a:hover {
   z-index: 10;
   font-size: 2rem;
   font-weight: bold;
-  text-shadow: 2px 2px 8px #cda434;
+  text-shadow: 2px 2px 8px #ffffff;
   padding: 0 10px;
 }
 
-/* تنسيق أقسام المنتجات */
+/* ================== قسم المنتجات ================== */
 .product-section {
   text-align: center;
   padding: 30px 10px;
@@ -267,14 +209,14 @@ nav a:hover {
   border-radius: 10px;
 }
 
-/* تنسيق الفوتر */
+/* ================== الفوتر ================== */
 footer {
-  background: #000;
+  background: #423f3f;
   color: white;
   text-align: center;
   padding: 20px;
   font-size: 1rem;
-  border-top: 3px solid #cda434;
+  border-top: 3px solid #034441;
   width: 100%;
 }
 
@@ -286,18 +228,93 @@ footer {
 }
 
 .social-icons a {
-  color: #cda434;
+  color: #023a50;
   font-size: 26px;
   transition: color 0.3s, transform 0.3s;
 }
 
 .social-icons a:hover {
-  color: #cda434;
+  color: #f0ece3;
   transform: scale(1.3);
-  text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
-/* Media Queries لتناسب الشاشات الصغيرة */
+/* ================== المعرض التفاعلي ================== */
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: #535050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.container .gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .gallery .img-box {
+  width: 80px;
+  height: 500px;
+  margin: 5px;
+  border: 0.5px solid lightgray;
+  border-radius: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+              rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  position: relative;
+  transition: width 0.4s ease;
+}
+
+.container .gallery .img-box:nth-child(1) {
+  background-image: url(/Image/design1.webp);
+}
+
+.container .gallery .img-box:nth-child(2) {
+  background-image: url(/Image/design2.webp);
+}
+
+.container .gallery .img-box:nth-child(3) {
+  background-image: url(/Image/design3.webp);
+}
+
+.container .gallery .img-box h2 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 100%;
+  background-color: rgba(238, 247, 255, 0.6);
+  padding: 2% 5%;
+  border-radius: 8px 0 0 8px;
+  transition: bottom 0.4s ease, opacity 0.4s ease;
+}
+
+.container .gallery .img-box:hover {
+  width: 300px;
+}
+
+.container .gallery .img-box:hover h2 {
+  opacity: 1;
+  bottom: 10%;
+}
+
+/* ================== الاستجابة ================== */
 @media (max-width: 768px) {
   header {
     font-size: 0.9rem;
@@ -310,9 +327,6 @@ footer {
     width: 90%;
     max-width: 300px;
     font-size: 0.9rem;
-  }
-  .search-button {
-    padding: 0 12px;
   }
   nav {
     gap: 15px;
@@ -327,36 +341,176 @@ footer {
     font-size: 22px;
   }
 }
-.product img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: var(--transition-smooth);
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
-  filter: brightness(0.9) contrast(1.2);
-  will-change: transform;
+
+@media screen and (max-width: 600px) {
+  .container .gallery {
+    flex-direction: column;
+  }
+  .img-box {
+    height: 300px;
+  }
+  .img-box:hover {
+    width: 220px !important;
+  }
 }
 
-.product:hover img {
-  transform: scale(1.05);
-  filter: brightness(1.1) contrast(1.1);
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.2rem !important;
+  }
+  h2 {
+    font-size: 0.9rem !important;
+  }
+  .img-box {
+    width: 50px !important;
+    height: 200px !important;
+    border-radius: 20px !important;
+  }
+  .img-box:hover {
+    width: 110px !important;
+  }
 }
-.product img {
-  filter: brightness(0.9) contrast(1.2);         /* تأثير ذهبي داكن */
-  transition: var(--transition-smooth);          /* انتقال ناعم */
-  transform: scale(1);                           /* الوضع الطبيعي */
+/* =============== الاستجابة الكاملة للشاشات الصغيرة =============== */
+@media (max-width: 768px) {
+  header {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .logo-container h4 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 90%;
+    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+
+  .search-button {
+    position: relative;
+    right: auto;
+    padding: 8px 16px;
+    margin-top: 5px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero-content {
+    font-size: 1.4rem;
+    padding: 0 5px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .product {
+    padding: 15px;
+  }
+
+  .product img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 15px 5px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-icons a {
+    font-size: 22px;
+  }
+
+  .container {
+    height: auto;
+    padding: 30px 10px;
+  }
+
+  .container h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .container .gallery {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container .gallery .img-box {
+    width: 85% !important;
+    height: 200px !important;
+    border-radius: 20px !important;
+  }
+
+  .container .gallery .img-box:hover {
+    width: 100% !important;
+  }
+
+  .container .gallery .img-box h2 {
+    font-size: 0.9rem;
+    bottom: 5% !important;
+  }
 }
 
-.product:hover img {
-  transform: scale(1.05);                        /* تكبير بسيط عند التحويم */
-  filter: brightness(1.1) contrast(1.1);         /* تفتيح وسطوع ذهبي أكثر */
-}
-/* تأثيرات الحركة */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
+/* شاشة أصغر جدًا */
+@media (max-width: 450px) {
+  .logo-container h4 {
+    font-size: 1.2rem;
+  }
 
-.product:nth-child(1) { animation: float 6s ease-in-out infinite; }
-.product:nth-child(2) { animation: float 6s ease-in-out infinite 2s; }
-.product:nth-child(3) { animation: float 6s ease-in-out infinite 4s; }
+  .search-bar {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .search-button i {
+    font-size: 1rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .hero-content {
+    font-size: 1.2rem;
+  }
+
+  .container h1 {
+    font-size: 1.1rem;
+  }
+
+  .container .gallery .img-box h2 {
+    font-size: 0.8rem;
+  }
+}

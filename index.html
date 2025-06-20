@@ -9,8 +9,6 @@
   <link rel="icon" type="image/x-icon" href="./Image/favicon.ico">
 </head>
 <body>
-  <div id="custom-cursor"></div>
-
   <!-- Header -->
   <header>
     <div class="logo-container">
@@ -28,7 +26,7 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="#product-section">Categories</a>
-    <a href="#contact-section">Contact</a> <!-- تم الربط الصحيح هنا -->
+    <a href="#contact-section">Contact</a>
   </nav>
 
   <!-- Hero Section -->
@@ -40,28 +38,24 @@
     </div>
   </div>
 
-  <!-- Product Section -->
-  <section class="product-section" id="product-section">
-    <h2>Featured Designs</h2>
-    <div class="product-grid">
-      <div class="product" data-name="Modern Living Room">
-        <a href="design-details.html?design=Modern%20Living%20Room">
-          <img src="./Image/ryp.webp" alt="Modern Living Room" loading="lazy" />
-        </a>
-        <p>Luxury designs</p>
-      </div>
-      <div class="product" data-name="Luxury Office Space">
-        <a href="video.html">
-          <img src="./Image/design2.webp" alt="Luxury Office Space" class="video-thumbnail" loading="lazy" />
-        </a>
-        <p>3D designs</p>
-      </div>
-      <div class="product" data-name="Cozy Bedroom">
-        <img src="./Image/2.png" alt="Cozy Bedroom" loading="lazy" />
-        <p>Cozy Bedroom</p>
-      </div>
+  <!-- Expandable Gallery -->
+  <div class="container">
+    <h1>Expandable Image Gallery</h1>
+    <div class="gallery">
+      <a href="/design-details.html" class="img-box">
+        <h2>Lake View</h2>
+      </a>
+      <a href="/video.html" class="img-box">
+        <h2>Fall</h2>
+      </a>
+      <a href="summer.html" class="img-box">
+        <h2>Summer</h2>
+      </a>
+      <a href="monsoon.html" class="img-box">
+        <h2>Monsoon</h2>
+      </a>
     </div>
-  </section>
+  </div>
 
   <!-- Contact Section / Footer -->
   <section id="contact-section">
@@ -85,5 +79,9 @@
 
   <!-- JS Script -->
   <script src="./js/script.js"></script>
+  <script>
+    // عرض السنة تلقائيًا
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
