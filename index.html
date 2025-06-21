@@ -4,9 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Render Your Plan</title>
-  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="./Image/favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="icon" type="image/x-icon" href="./Image/favicon.ico">
+
+  <!-- اختيار ملف CSS حسب نوع الجهاز -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      link.href = isMobile ? "./css/stylesphone.css" : "./css/styles.css";
+      document.head.appendChild(link);
+    });
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -30,55 +40,40 @@
   </nav>
 
   <!-- Hero Section -->
-  <div class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-
-    </div>
-  </div>
+  <div class="overlay"></div>
+  <div class="hero-content"></div>
 
   <!-- Expandable Gallery -->
   <div class="container">
     <h1>Expandable Image Gallery</h1>
     <div class="gallery">
-      <a href="/design-details.html" class="img-box">
-    
-      </a>
-      <a href="/video.html" class="img-box">
-        
-      </a>
-      <a href="summer.html" class="img-box">
-    
-      </a>
-      <!-- <a href="monsoon.html" class="img-box"> -->
-       
-      </a>
+      <a href="/design-details.html" class="img-box"></a>
+      <a href="/video.html" class="img-box"></a>
+      <a href="summer.html" class="img-box"></a>
     </div>
   </div>
 
-  
-    <footer>
-      <p>&copy; <span id="copyright-year"></span>
-        Ibrahim Alayan Interior Design. All rights reserved.
-      </p>
-      <div class="social-icons">
-        <a href="https://wa.me/962770777986" target="_blank" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.instagram.com/arch__ibrahem/" target="_blank" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="mailto:ibrahemalyan099@gmail.com" title="Email">
-          <i class="far fa-envelope"></i>
-        </a>
-      </div>
-    </footer>
-  </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="copyright-year"></span>
+      Ibrahim Alayan Interior Design. All rights reserved.
+    </p>
+    <div class="social-icons">
+      <a href="https://wa.me/962770777986" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com/arch__ibrahem/" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:ibrahemalyan099@gmail.com" title="Email">
+        <i class="far fa-envelope"></i>
+      </a>
+    </div>
+  </footer>
 
-  <!-- JS Script -->
+  <!-- Scripts -->
   <script src="./js/script.js"></script>
   <script>
-    // عرض السنة تلقائيًا
     document.getElementById("copyright-year").textContent = new Date().getFullYear();
   </script>
 </body>

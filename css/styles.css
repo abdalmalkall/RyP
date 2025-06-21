@@ -248,15 +248,15 @@ footer {
 }
 
 .container .gallery .img-box:nth-child(1) {
-  background-image: url(/Image/design1.webp);
+  background-image: url(/scr/Image/design1.webp);
 }
 
 .container .gallery .img-box:nth-child(2) {
-  background-image: url(/Image/design2.webp);
+  background-image: url(/scr/Image/design2.webp);
 }
 
 .container .gallery .img-box:nth-child(3) {
-  background-image: url(/Image/design3.webp);
+  background-image: url(/scr/Image/design3.webp);
 }
 
 .container .gallery .img-box:nth-child(8) {
@@ -483,4 +483,538 @@ footer {
   .container .gallery .img-box h2 {
     font-size: 0.8rem;
   }
+}
+/* ================== تصميم فاخر مخصص لهاتف iPhone X ================== */
+@media only screen 
+  and (device-width: 375px) 
+  and (device-height: 812px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+  body {
+    font-size: 15px;
+    background: #1a1a1a;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  header {
+    flex-direction: column;
+    padding: 12px 10px;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+  }
+
+  .logo-container h4 {
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.2);
+  }
+
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 16px;
+    border-radius: 30px;
+  }
+
+  .search-button {
+    position: relative;
+    margin-top: 6px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 1.05rem;
+    padding: 6px 12px;
+  }
+
+  .product-section {
+    padding: 20px 10px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .product {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  footer {
+    padding: 15px 10px;
+    font-size: 0.95rem;
+    border-top: 2px solid #707473;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 20px 10px;
+  }
+
+  .container h1 {
+    font-size: 1.3rem;
+  }
+
+  .container .gallery {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container .gallery .img-box {
+    width: 90% !important;
+    height: 200px !important;
+    border-radius: 20px !important;
+    transition: none !important;
+  }
+
+  .container .gallery .img-box:hover {
+    width: 100% !important;
+    transform: none !important;
+  }
+
+  .container .gallery .img-box h2 {
+    font-size: 0.9rem;
+    opacity: 1 !important;
+    bottom: 8% !important;
+  }
+}
+/* ================== أفكتات الصور المحسنة للهواتف المحمولة ================== */
+
+/* تحسين صور المنتجات */
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+/* تأثير التكبير والإضاءة عند اللمس */
+.product img:active {
+  transform: scale(1.05) rotateY(5deg);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(102, 126, 234, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.1);
+  border-color: rgba(102, 126, 234, 0.5);
+  filter: brightness(1.1) contrast(1.1) saturate(1.2);
+}
+
+/* تأثير الموجة الضوئية المتحركة للصور */
+.product img::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -200%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+  z-index: 1;
+}
+
+.product img:active::before {
+  left: 100%;
+  opacity: 1;
+}
+
+/* تأثير التموج عند اللمس */
+.product img::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(102, 126, 234, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+  z-index: 2;
+}
+
+.product img:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ================== تحسين صور المعرض ================== */
+.img-box {
+  width: 90%;
+  max-width: 350px;
+  height: 220px; /* زيادة الارتفاع قليلاً */
+  border-radius: 20px; /* زيادة التدوير */
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+/* تأثير الانحناء والتوهج عند اللمس */
+.img-box:active {
+  transform: 
+    scale(1.08) 
+    rotateX(10deg) 
+    rotateY(-10deg) 
+    translateZ(20px);
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(102, 126, 234, 0.4),
+    inset 0 0 50px rgba(255, 255, 255, 0.1);
+  border-color: rgba(102, 126, 234, 0.6);
+  filter: brightness(1.15) contrast(1.2) saturate(1.3);
+}
+
+/* إضافة طبقة متدرجة محسنة */
+.img-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0.6) 80%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.img-box:active::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(102, 126, 234, 0.2) 40%,
+    rgba(0, 0, 0, 0.4) 80%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+/* تأثير الجسيمات المتحركة */
+.img-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3) 2px, transparent 2px),
+    radial-gradient(circle at 60% 40%, rgba(102, 126, 234, 0.4) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px, 40px 40px;
+  opacity: 0;
+  transition: all 0.6s ease;
+  animation: particles 8s linear infinite;
+  z-index: 2;
+}
+
+.img-box:active::after {
+  opacity: 1;
+  animation-duration: 2s;
+}
+
+@keyframes particles {
+  0% { background-position: 0 0, 0 0, 0 0; }
+  100% { background-position: 50px 50px, -30px 30px, 40px -40px; }
+}
+
+/* تحسين نص صور المعرض */
+.img-box h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  transform: translateY(10px);
+  opacity: 0.9;
+  transition: all 0.4s ease;
+}
+
+.img-box:active h2 {
+  transform: translateY(0);
+  opacity: 1;
+  color: #ffffff;
+  text-shadow: 
+    0 2px 15px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(102, 126, 234, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3);
+  font-size: 1.25rem;
+}
+
+/* ================== تأثيرات خاصة لكل صورة في المعرض ================== */
+
+/* الصورة الأولى - تأثير الأزرق والبنفسجي */
+.img-box:nth-child(1) {
+  background-image: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+
+.img-box:nth-child(1)::before {
+  background-image: 
+    radial-gradient(circle at center, rgba(102, 126, 234, 0.8), transparent),
+    linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+}
+
+.img-box:nth-child(1):active {
+  background-image: linear-gradient(45deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+/* الصورة الثانية - تأثير الوردي والأحمر */
+.img-box:nth-child(2) {
+  background-image: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+}
+
+.img-box:nth-child(2)::before {
+  background-image: 
+    radial-gradient(circle at center, rgba(240, 147, 251, 0.8), transparent),
+    linear-gradient(135deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+}
+
+.img-box:nth-child(2):active {
+  background-image: linear-gradient(45deg, #f093fb 0%, #f5576c 50%, #ff9a9e 100%);
+}
+
+/* الصورة الثالثة - تأثير الأزرق السماوي */
+.img-box:nth-child(3) {
+  background-image: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.img-box:nth-child(3)::before {
+  background-image: 
+    radial-gradient(circle at center, rgba(79, 172, 254, 0.8), transparent),
+    linear-gradient(225deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+}
+
+.img-box:nth-child(3):active {
+  background-image: linear-gradient(45deg, #4facfe 0%, #00f2fe 50%, #43e97b 100%);
+}
+
+/* ================== تأثيرات إضافية للمس المطول ================== */
+
+/* تأثير الضغط المطول */
+@keyframes longPress {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1.1) rotate(2deg); }
+}
+
+.img-box.long-press {
+  animation: longPress 0.8s ease-in-out;
+  box-shadow: 
+    0 0 40px rgba(102, 126, 234, 0.6),
+    0 0 80px rgba(102, 126, 234, 0.3),
+    inset 0 0 50px rgba(255, 255, 255, 0.2);
+}
+
+/* تأثير الاهتزاز المحسن */
+@keyframes mobileVibrate {
+  0%, 100% { transform: scale(1.05) translateX(0); }
+  10% { transform: scale(1.05) translateX(-2px) rotate(0.5deg); }
+  20% { transform: scale(1.05) translateX(2px) rotate(-0.5deg); }
+  30% { transform: scale(1.05) translateX(-2px) rotate(0.5deg); }
+  40% { transform: scale(1.05) translateX(2px) rotate(-0.5deg); }
+  50% { transform: scale(1.05) translateX(-1px) rotate(0.2deg); }
+  60% { transform: scale(1.05) translateX(1px) rotate(-0.2deg); }
+  70% { transform: scale(1.05) translateX(-1px) rotate(0.2deg); }
+  80% { transform: scale(1.05) translateX(1px) rotate(-0.2deg); }
+  90% { transform: scale(1.05) translateX(0) rotate(0deg); }
+}
+
+.img-box:active {
+  animation: mobileVibrate 0.3s ease-in-out;
+}
+
+/* ================== تحسينات للشاشات الصغيرة ================== */
+@media (max-width: 360px) {
+  .product img {
+    height: 180px;
+    border-radius: 12px;
+  }
+  
+  .img-box {
+    height: 180px;
+    border-radius: 15px;
+  }
+  
+  .img-box h2 {
+    font-size: 1rem;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+  }
+  
+  /* تقليل كثافة الأفكتات للأجهزة الضعيفة */
+  .img-box:active {
+    transform: scale(1.05) rotateX(5deg);
+    filter: brightness(1.1);
+  }
+  
+  .product img:active {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+  }
+}
+
+/* ================== تأثيرات الوضع الداكن ================== */
+@media (prefers-color-scheme: dark) {
+  .product img {
+    border-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  .product img:active {
+    border-color: rgba(102, 126, 234, 0.7);
+    box-shadow: 
+      0 15px 35px rgba(0, 0, 0, 0.6),
+      0 0 25px rgba(102, 126, 234, 0.4);
+  }
+  
+  .img-box {
+    border-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 
+      0 15px 40px rgba(0, 0, 0, 0.5),
+      0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .img-box:active {
+    border-color: rgba(102, 126, 234, 0.8);
+    box-shadow: 
+      0 25px 60px rgba(0, 0, 0, 0.7),
+      0 0 35px rgba(102, 126, 234, 0.5);
+  }
+}
+
+/* ================== تأثيرات خاصة بالحركة المختلطة ================== */
+
+/* تأثير السحب والإفلات */
+.img-box.dragging {
+  transform: scale(1.1) rotate(5deg);
+  opacity: 0.8;
+  z-index: 1000;
+  cursor: grabbing;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: scale(1.1) rotate(5deg) translateY(0); }
+  50% { transform: scale(1.1) rotate(5deg) translateY(-10px); }
+}
+
+/* تأثير الارتداد عند الإفلات */
+.img-box.bounce-back {
+  animation: bounceBack 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceBack {
+  0% { transform: scale(1.1) rotate(5deg); }
+  50% { transform: scale(0.9) rotate(-2deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* تأثير التلاشي والظهور */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.img-box {
+  animation: fadeInScale 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.img-box:nth-child(1) { animation-delay: 0.1s; }
+.img-box:nth-child(2) { animation-delay: 0.2s; }
+.img-box:nth-child(3) { animation-delay: 0.3s; }
+
+/* ================== تحسينات الأداء للهواتف ================== */
+
+/* تقليل التأثيرات للأجهزة البطيئة */
+@media (prefers-reduced-motion: reduce) {
+  .img-box,
+  .product img {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    animation: none;
+  }
+  
+  .img-box:active,
+  .product img:active {
+    transform: scale(1.02);
+  }
+  
+  .img-box::after,
+  .product img::before,
+  .product img::after {
+    display: none;
+  }
+}
+
+/* استخدام will-change لتحسين الأداء */
+.img-box,
+.product img {
+  will-change: transform, opacity, filter;
+}
+
+.img-box:active,
+.product img:active {
+  will-change: auto;
+}
+
+/* تحسين الذاكرة */
+.img-box::before,
+.img-box::after,
+.product img::before,
+.product img::after {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
