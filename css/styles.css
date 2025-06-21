@@ -25,7 +25,7 @@ header {
   justify-content: center;
   background: linear-gradient(135deg, #2c2c2c, #1f1f1f);
   padding: 15px;
-  box-shadow: 0 4px 15px rgb(0, 49, 58);
+  box-shadow: 0 4px 15px rgb(112, 118, 119);
   border-bottom: 3px solid #0059ff00;
   width: 100%;
   font-size: 1rem;
@@ -44,10 +44,10 @@ header {
   font-size: 1.8rem;
   font-weight: bold;
   color: #ffffff;
-  text-shadow: 3px 3px 8px rgb(0, 66, 104);
+  text-shadow: 3px 3px 8px rgb(78, 80, 82);
 }
 
-/* ================== شريط البحث ================== */
+
 .search-container {
   display: flex;
   align-items: center;
@@ -60,7 +60,7 @@ header {
   flex: 1;
   max-width: 400px;
   padding: 14px 20px;
-  border: 2px solid #00425c;
+  border: 2px solid #454546;
   border-radius: 50px;
   background: #222;
   color: white;
@@ -72,7 +72,7 @@ header {
 
 .search-bar:focus {
   border-color: #ffffff;
-  box-shadow: 0 0 15px rgba(133, 131, 122, 0.6);
+  box-shadow: 0 0 15px rgb(255, 255, 255);
 }
 
 .search-button {
@@ -93,7 +93,7 @@ header {
 
 .search-button i {
   font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(92, 90, 90, 0.6);
 }
 
 .search-button:hover {
@@ -128,7 +128,7 @@ nav a::after {
   bottom: 0;
   width: 0;
   height: 2px;
-  background: #044d6e;
+  background: #ffffff;
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -140,41 +140,11 @@ nav a:hover::after {
 nav a:hover {
   color: #ffffff;
   transform: scale(1.2);
-  text-shadow: 0 0 15px rgba(10, 97, 119, 0.8);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
 /* ================== قسم البطل ================== */
-.hero {
-  position: relative;
-  background: url("../Image/RYP.webp") no-repeat center center/cover;
-  height: 55vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: rgb(72, 214, 219);
-  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.7);
-  border-bottom: 4px solid #ffffff;
-  width: 100%;
-}
 
-.hero .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.75);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 10;
-  font-size: 2rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px #ffffff;
-  padding: 0 10px;
-}
 
 /* ================== قسم المنتجات ================== */
 .product-section {
@@ -209,14 +179,13 @@ nav a:hover {
   border-radius: 10px;
 }
 
-/* ================== الفوتر ================== */
 footer {
   background: #423f3f;
   color: white;
   text-align: center;
   padding: 20px;
   font-size: 1rem;
-  border-top: 3px solid #034441;
+  border-top: 3px solid #707473;
   width: 100%;
 }
 
@@ -228,7 +197,7 @@ footer {
 }
 
 .social-icons a {
-  color: #023a50;
+  color: #f5eded;
   font-size: 26px;
   transition: color 0.3s, transform 0.3s;
 }
@@ -290,7 +259,8 @@ footer {
   background-image: url(/Image/design3.webp);
 }
 
-.container .gallery .img-box h2 {
+.container .gallery .img-box:nth-child(8) {
+  background-image: url;
   font-family: "Playfair Display", serif;
   letter-spacing: 0.2rem;
   font-weight: 500;
